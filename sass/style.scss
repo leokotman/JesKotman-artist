@@ -1,12 +1,47 @@
+@font-face {
+    font-family: "philosopherregular";
+    src: url('../fonts/Philosopher-Regular-webfont.eot');
+    src: url('../fonts/Philosopher-Regular-webfont.woff') format('woff'),
+         url('../fonts/Philosopher-Regular-webfont.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "philosopheritalic";
+    src: url('../fonts/Philosopher-Italic-webfont.eot');
+    src: url('../fonts/Philosopher-Italic-webfont.woff') format('woff'),
+         url('../fonts/Philosopher-Italic-webfont.ttf') format('ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "philosopherbold_italic";
+    src: url('../fonts/Philosopher-BoldItalic-webfont.eot');
+    src: url('../fonts/Philosopher-BoldItalic-webfont.woff') format('woff'),
+         url('../fonts/Philosopher-BoldItalic-webfont.ttf') format('ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "philosopherbold";
+    src: url('../fonts/Philosopher-Bold-webfont.eot');
+    src: url('../fonts/Philosopher-Bold-webfont.woff') format('woff'),
+         url('../fonts/Philosopher-Bold-webfont.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
 $width-site: 100%;
 $border-width: 3px;
-$color-block: lightblue;
+$color-block: #cefff1;
+
 
 .header {
     min-height: 100px;
     background-color: $color-block;
     margin: 0 auto;
     width: 100%;
+    max-width: 1280px;
     display: flex;
     box-sizing: border-box;
 }
@@ -23,11 +58,16 @@ $color-block: lightblue;
     background-image: url(img/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: "philosopherbold";
+    font-weight: bold;
+    font-size: 20px;
 
     .navbar-brand {
         text-shadow: rgba(255, 255, 255, 1) 0 0 20px;
-        color: #0083bd;
+        color: #00423f;
         box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
     }
     .navbar-brand:hover,
     .navbar-brand:focus {
@@ -53,7 +93,14 @@ $color-block: lightblue;
         }
 
         .nav-link {
-        font-size: 20px;
+            font-size: 20px;
+            color: #00423f;
+        }
+        .nav-link:hover,
+        .nav-link:focus {
+            color: #fff;
+            background-color: #15b7b9;
+            border-radius: 10px;
         }
     
         .dropdown-toggle {
@@ -97,7 +144,10 @@ $color-block: lightblue;
     }
 
     .display-4 {
+        font-family: "philosopherbold_italic";
         font-size: 40px;
+        font-style: italic;
+        font-weight: bold;
     }
 
     .jumbotron {
@@ -106,6 +156,13 @@ $color-block: lightblue;
         padding-left: 20px;
         margin: 0;
     }
+
+    .lead {
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-weight: 400;
+        font-size: 1.5em;
+        line-height: 2;
+    }
 }
 
 .button-up {
@@ -113,41 +170,87 @@ $color-block: lightblue;
 }
 
 .footer {
-    height: 200px;
-    background-color: #1a2b51;
-    margin: 0 auto;
-    width: $width-site;
     display: flex;
-    flex-wrap: wrap;
-}
-
-.bottom-footer {
-    display: flex;
-    flex-wrap: wrap;
-
+    flex-direction: column;
     align-items: center;
-    width: 90%;
-    justify-content: center;
+    min-height: 200px;
+    width: $width-site;
+    max-width: 1280px;
+    background-color: #15b7b9;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 2% 0 1%;
+    font-family: "philosopherbold";
+}
+.footer-heading {
+    font-weight: bold;
 }
 
-.contacts-footer {
+.footer-top {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    flex-grow: 1;
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 0.05em;
-    color: #FFFFFF;
+    flex-wrap: wrap;
+    list-style-type: none;
+    width: 95%;
+    justify-content: center;
+    padding: 1.5%;
 }
 
-.copyright {
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 0.05em;
-    color: #FFFFFF;
-    opacity: 0.4;
+.footer-list {
+    margin: 0 10px;
+    line-height: 3em;
+    padding: 5px;
+    box-sizing: border-box;
 }
+.footer-list:hover,
+.footer-list:focus {
+    background-color: #cefff1;
+    border-radius: 5px;
+}
+
+.footer-link,
+.footer-link:hover,
+.footer-link:focus {
+    color: #00423f;
+}
+
+hr {
+    border-top: 1px dotted #00423f;
+    height: 1px;
+    width: 100%;
+    margin: 0;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 95%;
+    justify-content: center;
+
+    .contacts-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        padding: 1% 10%;
+        flex-grow: 1;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.05em;
+        list-style-type: none;
+        color: #FFFFFF;
+    }
+    
+    .copyright {
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        opacity: 0.4;
+    }
+}
+
+
 
 @media (max-width: 750px) {
     .content {

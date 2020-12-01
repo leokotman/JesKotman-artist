@@ -1,9 +1,38 @@
-/* line 5, ../sass/style.scss */
+@font-face {
+  font-family: "philosopherregular";
+  src: url("../fonts/Philosopher-Regular-webfont.eot");
+  src: url("../fonts/Philosopher-Regular-webfont.woff") format("woff"), url("../fonts/Philosopher-Regular-webfont.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "philosopheritalic";
+  src: url("../fonts/Philosopher-Italic-webfont.eot");
+  src: url("../fonts/Philosopher-Italic-webfont.woff") format("woff"), url("../fonts/Philosopher-Italic-webfont.ttf") format("ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "philosopherbold_italic";
+  src: url("../fonts/Philosopher-BoldItalic-webfont.eot");
+  src: url("../fonts/Philosopher-BoldItalic-webfont.woff") format("woff"), url("../fonts/Philosopher-BoldItalic-webfont.ttf") format("ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "philosopherbold";
+  src: url("../fonts/Philosopher-Bold-webfont.eot");
+  src: url("../fonts/Philosopher-Bold-webfont.woff") format("woff"), url("../fonts/Philosopher-Bold-webfont.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+/* line 39, ../sass/style.scss */
 .header {
   min-height: 100px;
-  background-color: lightblue;
+  background-color: #cefff1;
   margin: 0 auto;
   width: 100%;
+  max-width: 1280px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,7 +40,7 @@
           box-sizing: border-box;
 }
 
-/* line 14, ../sass/style.scss */
+/* line 49, ../sass/style.scss */
 .logo {
   width: 100px;
   height: 122px;
@@ -20,37 +49,47 @@
           box-sizing: border-box;
 }
 
-/* line 21, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 .navbar {
   width: 100%;
   background-image: url(img/banner.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: "philosopherbold";
+  font-weight: bold;
+  font-size: 20px;
 }
-/* line 27, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 .navbar .navbar-brand {
   text-shadow: white 0 0 20px;
-  color: #0083bd;
+  color: #00423f;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-/* line 32, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 .navbar .navbar-brand:hover,
 .navbar .navbar-brand:focus {
   background: white;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.7621848056) 10%, rgba(21, 209, 213, 0.1681139008) 92%);
   border-radius: 10px;
 }
-/* line 38, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 .navbar .navbar-brand:active {
   border: 1px solid #15d1d5;
   border-radius: 10px;
 }
-/* line 43, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 .navbar .navbar-collapse {
   text-align: center;
 }
-/* line 46, ../sass/style.scss */
+/* line 86, ../sass/style.scss */
 .navbar .navbar-collapse .navbar-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -60,20 +99,28 @@
           justify-content: space-evenly;
   width: 100%;
 }
-/* line 51, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 .navbar .navbar-collapse .mr-auto {
   margin-right: 0 !important;
 }
-/* line 55, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 .navbar .navbar-collapse .nav-link {
   font-size: 20px;
+  color: #00423f;
 }
-/* line 59, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
+.navbar .navbar-collapse .nav-link:hover,
+.navbar .navbar-collapse .nav-link:focus {
+  color: #fff;
+  background-color: #15b7b9;
+  border-radius: 10px;
+}
+/* line 106, ../sass/style.scss */
 .navbar .navbar-collapse .dropdown-toggle {
   font-size: 20px;
 }
 
-/* line 68, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 .content {
   padding: 50px 0;
   margin: 0 auto;
@@ -84,64 +131,135 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-/* line 75, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
 .content .about_images {
   width: 100%;
   padding-left: 50px;
 }
-/* line 79, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 .content .about_images .carousel {
   width: 100%;
 }
-/* line 82, ../sass/style.scss */
+/* line 129, ../sass/style.scss */
 .content .about_images .carousel .carousel-item {
   width: 90vw;
   height: 500px;
 }
-/* line 86, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 .content .about_images .carousel .carousel-item .d-block {
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0 auto;
 }
-/* line 94, ../sass/style.scss */
+/* line 141, ../sass/style.scss */
 .content_item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
 }
-/* line 99, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 .content .display-4 {
+  font-family: "philosopherbold_italic";
   font-size: 40px;
+  font-style: italic;
+  font-weight: bold;
 }
-/* line 103, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 .content .jumbotron {
   background-color: #fff;
   width: 100%;
   padding-left: 20px;
   margin: 0;
 }
+/* line 160, ../sass/style.scss */
+.content .lead {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 2;
+}
 
-/* line 111, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 .button-up {
   margin: auto;
 }
 
-/* line 115, ../sass/style.scss */
+/* line 172, ../sass/style.scss */
 .footer {
-  height: 200px;
-  background-color: #1a2b51;
-  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 200px;
   width: 100%;
+  max-width: 1280px;
+  background-color: #15b7b9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  padding: 2% 0 1%;
+  font-family: "philosopherbold";
+}
+
+/* line 185, ../sass/style.scss */
+.footer-heading {
+  font-weight: bold;
+}
+
+/* line 189, ../sass/style.scss */
+.footer-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  list-style-type: none;
+  width: 95%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5%;
 }
 
-/* line 124, ../sass/style.scss */
-.bottom-footer {
+/* line 198, ../sass/style.scss */
+.footer-list {
+  margin: 0 10px;
+  line-height: 3em;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 204, ../sass/style.scss */
+.footer-list:hover,
+.footer-list:focus {
+  background-color: #cefff1;
+  border-radius: 5px;
+}
+
+/* line 210, ../sass/style.scss */
+.footer-link,
+.footer-link:hover,
+.footer-link:focus {
+  color: #00423f;
+}
+
+/* line 216, ../sass/style.scss */
+hr {
+  border-top: 1px dotted #00423f;
+  height: 1px;
+  width: 100%;
+  margin: 0;
+}
+
+/* line 223, ../sass/style.scss */
+.footer-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,31 +268,33 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 90%;
+  width: 95%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-
-/* line 133, ../sass/style.scss */
-.contacts-footer {
+/* line 230, ../sass/style.scss */
+.footer-bottom .contacts-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 100%;
+  padding: 1% 10%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.05em;
+  list-style-type: none;
   color: #FFFFFF;
 }
-
-/* line 144, ../sass/style.scss */
-.copyright {
+/* line 244, ../sass/style.scss */
+.footer-bottom .copyright {
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.05em;
@@ -183,22 +303,22 @@
 }
 
 @media (max-width: 750px) {
-  /* line 153, ../sass/style.scss */
+  /* line 256, ../sass/style.scss */
   .content {
     padding-top: 0;
   }
-  /* line 156, ../sass/style.scss */
+  /* line 259, ../sass/style.scss */
   .content .about_images {
     display: none;
   }
 }
 @media (max-width: 640px) {
-  /* line 164, ../sass/style.scss */
+  /* line 267, ../sass/style.scss */
   .navbar {
     background-size: auto;
   }
 
-  /* line 168, ../sass/style.scss */
+  /* line 271, ../sass/style.scss */
   .contacts-footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
