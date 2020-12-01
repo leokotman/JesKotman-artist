@@ -114,12 +114,20 @@ body {
         font-size: 20px;
         }
 
-        .dropdown-menu {
+        .navbar-nav .dropdown-menu {
+            position: absolute;
             right: 0;
-            margin: .125rem 30px 0;
             top: 120%;
             left: auto;
+            margin: .125rem 30px 0;
             z-index: 10;
+            max-width: 300px;
+            text-align: center;
+            padding: 0;
+            width: 300px;
+        }
+        .dropdown-item {
+            padding: 2%;
         }
     }
     
