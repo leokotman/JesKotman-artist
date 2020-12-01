@@ -28,7 +28,7 @@
 }
 /* line 38, ../sass/style.scss */
 body {
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Alegreya Sans', Arial, Helvetica, sans-serif;
 }
 
 /* line 42, ../sass/style.scss */
@@ -129,8 +129,16 @@ body {
 .navbar .navbar-collapse .dropdown-toggle {
   font-size: 20px;
 }
+/* line 117, ../sass/style.scss */
+.navbar .navbar-collapse .dropdown-menu {
+  right: 0;
+  margin: .125rem 30px 0;
+  top: 120%;
+  left: auto;
+  z-index: 10;
+}
 
-/* line 122, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 .content {
   padding: 50px 0;
   margin: 0 auto;
@@ -141,33 +149,33 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-/* line 129, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 .content .about_images {
   width: 100%;
   padding-left: 50px;
 }
-/* line 133, ../sass/style.scss */
+/* line 141, ../sass/style.scss */
 .content .about_images .carousel {
   width: 100%;
 }
-/* line 136, ../sass/style.scss */
+/* line 144, ../sass/style.scss */
 .content .about_images .carousel .carousel-item {
   width: 90vw;
   height: 500px;
 }
-/* line 140, ../sass/style.scss */
+/* line 148, ../sass/style.scss */
 .content .about_images .carousel .carousel-item .d-block {
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0 auto;
 }
-/* line 148, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
 .content_item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
 }
-/* line 153, ../sass/style.scss */
+/* line 161, ../sass/style.scss */
 .content .display-4 {
   font-family: "philosopherbold_italic", Arial, Helvetica, sans-serif;
   font-size: 40px;
@@ -175,22 +183,28 @@ body {
   font-weight: bold;
   text-align: center;
 }
-/* line 161, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 .content .jumbotron {
   background-color: #fff;
   width: 100%;
   padding-left: 20px;
   margin: 0;
 }
-/* line 168, ../sass/style.scss */
+/* line 176, ../sass/style.scss */
 .content .lead {
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Alegreya Sans', sans-serif;
   font-weight: 400;
   font-size: 1.5em;
   line-height: 2.5;
 }
+/* line 182, ../sass/style.scss */
+.content .gradient-text {
+  background: -webkit-gradient(linear, left top, right bottom, from(#F2FDFF), color-stop(#FFF), to(#E6F9FC));
+  background: linear-gradient(to bottom right, #F2FDFF, #FFF, #E6F9FC);
+  border-radius: 5px;
+}
 
-/* line 176, ../sass/style.scss */
+/* line 188, ../sass/style.scss */
 .button-up {
   margin: auto;
   font-size: 18px;
@@ -201,7 +215,7 @@ body {
           box-sizing: border-box;
 }
 
-/* line 184, ../sass/style.scss */
+/* line 196, ../sass/style.scss */
 .button-up:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -211,7 +225,7 @@ body {
   text-decoration: none;
 }
 
-/* line 192, ../sass/style.scss */
+/* line 204, ../sass/style.scss */
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,12 +248,12 @@ body {
   font-family: "philosopherbold", Arial, Helvetica, sans-serif;
 }
 
-/* line 205, ../sass/style.scss */
+/* line 217, ../sass/style.scss */
 .footer-heading {
   font-weight: bold;
 }
 
-/* line 209, ../sass/style.scss */
+/* line 221, ../sass/style.scss */
 .footer-top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -254,7 +268,7 @@ body {
   padding: 1.5%;
 }
 
-/* line 218, ../sass/style.scss */
+/* line 230, ../sass/style.scss */
 .footer-list {
   margin: 0 10px;
   line-height: 3em;
@@ -263,21 +277,21 @@ body {
           box-sizing: border-box;
 }
 
-/* line 224, ../sass/style.scss */
+/* line 236, ../sass/style.scss */
 .footer-list:hover,
 .footer-list:focus {
   background-color: #cefff1;
   border-radius: 5px;
 }
 
-/* line 230, ../sass/style.scss */
+/* line 242, ../sass/style.scss */
 .footer-link,
 .footer-link:hover,
 .footer-link:focus {
   color: #00423f;
 }
 
-/* line 236, ../sass/style.scss */
+/* line 248, ../sass/style.scss */
 hr {
   border-top: 1px dotted #00423f;
   height: 1px;
@@ -285,7 +299,7 @@ hr {
   margin: 0;
 }
 
-/* line 243, ../sass/style.scss */
+/* line 255, ../sass/style.scss */
 .footer-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,7 +314,7 @@ hr {
       -ms-flex-pack: center;
           justify-content: center;
 }
-/* line 250, ../sass/style.scss */
+/* line 262, ../sass/style.scss */
 .footer-bottom .contacts-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -320,7 +334,7 @@ hr {
   list-style-type: none;
   color: #FFFFFF;
 }
-/* line 264, ../sass/style.scss */
+/* line 276, ../sass/style.scss */
 .footer-bottom .copyright {
   font-size: 16px;
   line-height: 26px;
@@ -330,26 +344,26 @@ hr {
 }
 
 @media (max-width: 750px) {
-  /* line 276, ../sass/style.scss */
+  /* line 288, ../sass/style.scss */
   .content {
     padding-top: 0;
   }
-  /* line 279, ../sass/style.scss */
+  /* line 291, ../sass/style.scss */
   .content .about_images {
     display: none;
   }
-  /* line 283, ../sass/style.scss */
+  /* line 295, ../sass/style.scss */
   .content .jumbotron {
     padding: 5% 0 0 0;
   }
 }
 @media (max-width: 640px) {
-  /* line 291, ../sass/style.scss */
+  /* line 303, ../sass/style.scss */
   .navbar {
     background-size: auto;
   }
 
-  /* line 295, ../sass/style.scss */
+  /* line 307, ../sass/style.scss */
   .contacts-footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
